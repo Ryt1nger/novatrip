@@ -1539,11 +1539,10 @@ main, .header, .footer {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 4px;
+  margin-top: auto;
 }
 
 .mobile-nav__cta {
-  margin-top: auto;
   text-align: center;
 }
 
