@@ -1394,9 +1394,11 @@ main, .header, .footer {
 
 .app-mockup {
   display: block;
-  width: min(420px, 48vw);
+  width: min(320px, 38vw);
+  max-height: min(600px, 60vh);
   height: auto;
-  filter: drop-shadow(0 28px 56px rgba(0, 0, 0, 0.16));
+  object-fit: contain;
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.12));
 }
 
 /* CTA */
@@ -1614,7 +1616,8 @@ main, .header, .footer {
   }
 
   .app-mockup {
-    width: min(340px, 85vw);
+    width: min(240px, 70vw);
+    max-height: none;
   }
 
   .analysis-panel__inner {
