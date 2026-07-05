@@ -1585,7 +1585,7 @@ main, .header, .footer {
 
   .app-download__inner {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 32px;
   }
 
   .app-download__phone {
@@ -1616,8 +1616,8 @@ main, .header, .footer {
   }
 
   .app-mockup {
-    width: min(240px, 70vw);
-    max-height: none;
+    width: min(168px, 49vw);
+    max-height: min(360px, 42vh);
   }
 
   .analysis-panel__inner {
