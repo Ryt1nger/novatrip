@@ -1302,7 +1302,7 @@ main, .header, .footer {
   background: var(--surface);
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .app-download__inner {
@@ -1312,8 +1312,15 @@ main, .header, .footer {
   align-items: center;
 }
 
-.app-download__logo {
-  margin-bottom: 20px;
+.app-download__lead {
+  position: relative;
+}
+
+.app-download__lead .app-download__logo {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 14px);
+  margin: 0;
 }
 
 .app-download__content h2 {
@@ -1585,6 +1592,11 @@ main, .header, .footer {
 
   .app-download__content {
     text-align: center;
+  }
+
+  .app-download__lead .app-download__logo {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .app-download__content > p {
