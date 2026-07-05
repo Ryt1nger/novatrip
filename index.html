@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NovaTrip — подбор туров, маршрутов, экскурсий и развлечений. Находим самые выгодные предложения за секунды по вашему запросу.">
+  <title>NovaTrip — Умный подбор туров</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <style>html { zoom: 130%; }</style>
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true">
+    <div class="page-bg__orb page-bg__orb--1"></div>
+    <div class="page-bg__orb page-bg__orb--2"></div>
+    <div class="page-bg__grid"></div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo" aria-label="NovaTrip — на главную">
+        <span class="logo__icon">
+          <img src="images/logo.png" alt="" class="logo__mark" width="40" height="40">
+        </span>
+        <span class="logo__word">Nova<span class="logo__accent">Trip</span></span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#how">Как это работает</a>
+        <a href="#destinations">Направления</a>
+        <a href="#experiences">Маршруты</a>
+        <a href="#features">Преимущества</a>
+        <a href="#examples">Примеры</a>
+      </nav>
+      <a href="#request" class="btn btn--sm btn--primary header__cta">Подобрать тур</a>
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="badge">
+            <span class="badge__dot"></span>
+            Подбор за 30 секунд
+          </div>
+          <h1 class="hero__title">
+            Самые выгодные туры —<br>
+            <span class="gradient-text">под ваш запрос</span>
+          </h1>
+          <p class="hero__desc">
+            Опишите, куда и когда хотите — мы сравним тысячи предложений
+            и подберём тур, маршрут, экскурсии и развлечения под ваши интересы.
+          </p>
+          <form class="search-form" id="request">
+            <div class="search-form__fields">
+              <input type="text" placeholder="Куда и что ищете? Бали, экскурсии, 2 человека" aria-label="Направление и пожелания">
+              <input type="text" placeholder="Даты: 15–25 августа" aria-label="Даты поездки">
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg">
+              Найти лучшее предложение
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+          <div class="hero__tags">
+            <span class="hero__tags-label">Направления:</span>
+            <button type="button" class="tag">Турция</button>
+            <button type="button" class="tag">Египет</button>
+            <button type="button" class="tag">ОАЭ</button>
+            <button type="button" class="tag">Таиланд</button>
+            <button type="button" class="tag">Мальдивы</button>
+          </div>
+          <div class="hero__tags hero__tags--soft">
+            <span class="hero__tags-label">Ещё подберём:</span>
+            <button type="button" class="tag tag--soft">Авторские маршруты</button>
+            <button type="button" class="tag tag--soft">Экскурсии</button>
+            <button type="button" class="tag tag--soft">Развлечения</button>
+            <button type="button" class="tag tag--soft">Гастротуры</button>
+          </div>
+          <div class="hero__stats">
+            <div class="stat">
+              <span class="stat__value">12 000+</span>
+              <span class="stat__label">предложений в базе</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">−23%</span>
+              <span class="stat__label">средняя экономия</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">30 сек</span>
+              <span class="stat__label">время подбора</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__toast hero__toast--1">
+            <span class="hero__toast-dot"></span>
+            Нашли тур на −18 400 ₽ · только что
+          </div>
+          <div class="hero__toast hero__toast--2">
+            <span class="hero__toast-dot hero__toast-dot--blue"></span>
+            Анализ 612 предложений · 24 сек
+          </div>
+          <div class="card-stack">
+            <article class="offer-card offer-card--back">
+              <div class="offer-card__img" style="--img: url('images/hero-turkey.jpg')"></div>
+              <div class="offer-card__body">
+                <div class="offer-card__header">
+                  <span>Турция, Анталия</span>
+                  <span class="offer-card__price">89 400 ₽</span>
+                </div>
+                <div class="offer-card__meta">5★ · 10 ночей · All Inclusive</div>
+              </div>
+            </article>
+            <article class="offer-card offer-card--mid">
+              <div class="offer-card__img" style="--img: url('images/hero-egypt.jpg')"></div>
+              <div class="offer-card__body">
+                <div class="offer-card__header">
+                  <span>Египет, Хургада</span>
+                  <span class="offer-card__price">76 200 ₽</span>
+                </div>
+                <div class="offer-card__meta">4★ · 12 ночей · Ultra All Incl.</div>
+              </div>
+            </article>
+            <article class="offer-card offer-card--front">
+              <div class="offer-card__img" style="--img: url('images/hero-maldives.jpg')"></div>
+              <div class="offer-card__body">
+                <div class="offer-card__badge">Лучшее предложение</div>
+                <div class="offer-card__header">
+                  <span>Мальдивы, Male</span>
+                  <span class="offer-card__price offer-card__price--best">142 800 ₽</span>
+                </div>
+                <div class="offer-card__meta">5★ · 8 ночей · Вилла на воде</div>
+                <div class="offer-card__savings">Экономия 34 200 ₽ vs. средняя цена</div>
+                <div class="offer-card__note">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                  Сравнили 847 вариантов
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="live-feed">
+        <div class="live-feed__track">
+          <span><strong>Москва → Бали</strong> · экономия 21 300 ₽ · 2 мин назад</span>
+          <span><strong>СПб → Дубай</strong> · подбор за 28 сек · 5 мин назад</span>
+          <span><strong>Казань → Турция</strong> · −14 800 ₽ · 8 мин назад</span>
+          <span><strong>Екатеринбург → Мальдивы</strong> · 743 варианта · 11 мин назад</span>
+          <span><strong>Новосибирск → Египет</strong> · −9 600 ₽ · 14 мин назад</span>
+          <span><strong>Москва → Бали</strong> · экономия 21 300 ₽ · 2 мин назад</span>
+          <span><strong>СПб → Дубай</strong> · подбор за 28 сек · 5 мин назад</span>
+          <span><strong>Казань → Турция</strong> · −14 800 ₽ · 8 мин назад</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="logos">
+      <div class="container">
+        <p class="logos__label">Сравниваем предложения от ведущих операторов</p>
+        <div class="logos__marquee">
+          <div class="logos__track">
+            <span>Anex Tour</span>
+            <span>Coral Travel</span>
+            <span>Pegas Touristik</span>
+            <span>TEZ TOUR</span>
+            <span>Biblio Globus</span>
+            <span>Intourist</span>
+            <span>Anex Tour</span>
+            <span>Coral Travel</span>
+            <span>Pegas Touristik</span>
+            <span>TEZ TOUR</span>
+            <span>Biblio Globus</span>
+            <span>Intourist</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Как это работает</span>
+          <h2>Три шага до идеального тура</h2>
+          <p>Без долгих звонков и ручного поиска — только точный результат</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="step__visual step__visual--1">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="step__num">01</div>
+            <h3>Опишите запрос</h3>
+            <p>Направление, бюджет, даты, пожелания по отелю, маршруту или развлечениям — своими словами.</p>
+          </article>
+          <article class="step">
+            <div class="step__visual step__visual--2">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="step__num">02</div>
+            <h3>Сравниваем все предложения</h3>
+            <p>Система проверяет цены, сезонность, отзывы и скрытые акции у всех операторов за секунды.</p>
+          </article>
+          <article class="step">
+            <div class="step__visual step__visual--3">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="step__num">03</div>
+            <h3>Получите лучшее</h3>
+            <p>Топ-3 варианта с обоснованием выбора — сразу на экране. Менеджер подключится, когда решите оформить покупку.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="destinations" id="destinations">
+      <div class="container">
+        <div class="section-head section-head--row">
+          <div>
+            <span class="section-tag">Направления</span>
+            <h2>Куда летят прямо сейчас</h2>
+            <p>Актуальные выгодные туры в эти страны — нажмите, чтобы подобрать</p>
+          </div>
+          <a href="#request" class="btn btn--outline">Все направления</a>
+        </div>
+        <div class="destinations__grid">
+          <a href="#request" class="dest-card dest-card--wide">
+            <img src="images/turkey.jpg" alt="Каппадокия, Турция" loading="lazy">
+            <div class="dest-card__overlay">
+              <span class="dest-card__country">Турция</span>
+              <span class="dest-card__price">от 68 900 ₽</span>
+              <span class="dest-card__save">−19% vs. средняя</span>
+            </div>
+          </a>
+          <a href="#request" class="dest-card">
+            <img src="images/egypt.jpg" alt="Пирамиды Гизы, Египет" loading="lazy">
+            <div class="dest-card__overlay">
+              <span class="dest-card__country">Египет</span>
+              <span class="dest-card__price">от 54 200 ₽</span>
+            </div>
+          </a>
+          <a href="#request" class="dest-card">
+            <img src="images/uae.jpg" alt="Бурдж-Халифа, Дубай" loading="lazy">
+            <div class="dest-card__overlay">
+              <span class="dest-card__country">ОАЭ</span>
+              <span class="dest-card__price">от 89 500 ₽</span>
+            </div>
+          </a>
+          <a href="#request" class="dest-card">
+            <img src="images/thailand.jpg" alt="Пляж Пхукет, Таиланд" loading="lazy">
+            <div class="dest-card__overlay">
+              <span class="dest-card__country">Таиланд</span>
+              <span class="dest-card__price">от 112 000 ₽</span>
+            </div>
+          </a>
+          <a href="#request" class="dest-card">
+            <img src="images/maldives.jpg" alt="Виллы на воде, Мальдивы" loading="lazy">
+            <div class="dest-card__overlay">
+              <span class="dest-card__country">Мальдивы</span>
+              <span class="dest-card__price">от 138 000 ₽</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="experiences" id="experiences">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Не только пляж</span>
+          <h2>Маршруты, впечатления и развлечения</h2>
+          <p>Помимо классических туров подберём программу отдыха под ваши интересы — от прогулок по городу до авторских путешествий</p>
+        </div>
+        <div class="experiences__grid">
+          <article class="experience-card">
+            <div class="experience-card__icon experience-card__icon--route">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 11l19-9-9 19-2-8-8-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Авторские маршруты</h3>
+            <p>Многодневные поездки с продуманной логистикой: города, природа, переезды — всё в одной программе.</p>
+            <span class="experience-card__example">Италия за 10 дней · Кавказ · Япония</span>
+          </article>
+          <article class="experience-card">
+            <div class="experience-card__icon experience-card__icon--tour">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Экскурсии</h3>
+            <p>Обзорные туры, музеи, исторические места и гиды — добавим к поездке или соберём отдельную программу.</p>
+            <span class="experience-card__example">Пирамиды · Старый город · Обзорная</span>
+          </article>
+          <article class="experience-card">
+            <div class="experience-card__icon experience-card__icon--fun">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 9H4.5a2.5 2.5 0 010-5C7 4 7 7 7 7M18 9h1.5a2.5 2.5 0 000-5C17 4 17 7 17 7M6 9v6a2 2 0 002 2h8a2 2 0 002-2V9M9 19v2M15 19v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Развлечения</h3>
+            <p>Аквапарки, сафари, дайвинг, шоу и парки — найдём лучшие варианты по цене и расположению.</p>
+            <span class="experience-card__example">Aquaventure · Safari · Вечернее шоу</span>
+          </article>
+          <article class="experience-card">
+            <div class="experience-card__icon experience-card__icon--food">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Гастрономия</h3>
+            <p>Дегустации, рестораны, винные туры и локальная кухня — для тех, кто путешествует ради вкусов.</p>
+            <span class="experience-card__example">Wine tour · Food walk · Рынки</span>
+          </article>
+          <article class="experience-card">
+            <div class="experience-card__icon experience-card__icon--active">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M14 4l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1 2-4zM6 16l1.5 3 3-1.5L9 14l-3 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Активный отдых</h3>
+            <p>Трекинг, сёрфинг, горные лыжи, дайвинг и rafting — подберём тур с нужным уровнем активности.</p>
+            <span class="experience-card__example">Сёрф · Трекинг · Горные лыжи</span>
+          </article>
+          <article class="experience-card">
+            <div class="experience-card__icon experience-card__icon--family">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Семья и дети</h3>
+            <p>Отели с детскими клубами, семейные экскурсии и спокойные маршруты — чтобы отдыхали все.</p>
+            <span class="experience-card__example">Kids club · Семейный круиз · Zoo</span>
+          </article>
+        </div>
+        <div class="experiences__banner">
+          <div class="experiences__banner-text">
+            <strong>Пример запроса:</strong>
+            «Турция, 7 ночей, All Inclusive + обзорная экскурсия и один день в аквапарке для двоих»
+          </div>
+          <a href="#request" class="btn btn--primary">Собрать такую поездку</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="analysis-panel">
+      <div class="container analysis-panel__inner">
+        <div class="analysis-panel__content">
+          <span class="section-tag">Как мы подбираем</span>
+          <h2>847 предложений → 1 идеальный тур</h2>
+          <p>Учитываем цену, сезонность, рейтинг отеля, маршрут, экскурсии и скрытые акции операторов.</p>
+          <ul class="analysis-panel__list">
+            <li>
+              <span class="analysis-panel__check">✓</span>
+              Сравнение 12+ операторов одновременно
+            </li>
+            <li>
+              <span class="analysis-panel__check">✓</span>
+              Анализ отзывов и рейтингов отелей
+            </li>
+            <li>
+              <span class="analysis-panel__check">✓</span>
+              Поиск скрытых скидок и раннего бронирования
+            </li>
+            <li>
+              <span class="analysis-panel__check">✓</span>
+              Маршруты, экскурсии и развлечения в одном подборе
+            </li>
+          </ul>
+        </div>
+        <div class="analysis-panel__demo">
+          <div class="analysis-demo">
+            <div class="analysis-demo__header">
+              <span class="analysis-demo__status"><span class="badge__dot"></span> Подбор в процессе</span>
+              <span class="analysis-demo__timer">00:24</span>
+            </div>
+            <div class="analysis-demo__bar">
+              <div class="analysis-demo__progress"></div>
+            </div>
+            <div class="analysis-demo__lines">
+              <div class="analysis-demo__line analysis-demo__line--done">Anex Tour… 214 туров</div>
+              <div class="analysis-demo__line analysis-demo__line--done">Coral Travel… 189 туров</div>
+              <div class="analysis-demo__line analysis-demo__line--active">Сравнение цен и условий…</div>
+              <div class="analysis-demo__line">Фильтрация по вашему бюджету…</div>
+            </div>
+            <div class="analysis-demo__result">
+              <span>Лучший результат</span>
+              <strong>Antalya Resort 5★ · −23 400 ₽</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-head section-head--left">
+          <span class="section-tag">Преимущества</span>
+          <h2>Почему NovaTrip</h2>
+        </div>
+        <div class="features__grid">
+          <article class="feature">
+            <div class="feature__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Мгновенный анализ</h3>
+            <p>Сравниваем тысячи предложений параллельно — результат за полминуты, не за часы.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Реальная экономия</h3>
+            <p>Находим скрытые скидки и оптимальные комбинации перелёт + отель, которые легко пропустить.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Проверенные операторы</h3>
+            <p>Работаем только с лицензированными туроператорами. Все предложения — официальные.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Помощь при покупке</h3>
+            <p>Подбор — автоматически. Когда выберете тур, менеджер поможет оформить и оплатить, останется на связи до вылета.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="examples" id="examples">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Результаты</span>
+          <h2>Результаты нашего подбора</h2>
+          <p>Реальные кейсы подбора за последний месяц</p>
+        </div>
+        <div class="examples__grid">
+          <article class="example-card">
+            <div class="example-card__img">
+              <img src="images/uae.jpg" alt="Бурдж-Халифа, Дубай" loading="lazy">
+            </div>
+            <div class="example-card__body">
+              <div class="example-card__top">
+                <span class="example-card__route">Москва → Дубай</span>
+                <span class="example-card__save">−28 500 ₽</span>
+              </div>
+              <p class="example-card__query">«Семья из 4 человек, 5★, аквапарк, до 200 000 ₽»</p>
+              <div class="example-card__result">
+                <span>Jumeirah Beach Hotel</span>
+                <span>171 400 ₽</span>
+              </div>
+            </div>
+          </article>
+          <article class="example-card">
+            <div class="example-card__img">
+              <img src="images/thailand.jpg" alt="Пляж Пхукет, Таиланд" loading="lazy">
+            </div>
+            <div class="example-card__body">
+              <div class="example-card__top">
+                <span class="example-card__route">СПб → Таиланд</span>
+                <span class="example-card__save">−19 800 ₽</span>
+              </div>
+              <p class="example-card__query">«Пара, Пхукет, тихий пляж, 10–14 ночей»</p>
+              <div class="example-card__result">
+                <span>Kata Rocks Resort</span>
+                <span>134 600 ₽</span>
+              </div>
+            </div>
+          </article>
+          <article class="example-card">
+            <div class="example-card__img">
+              <img src="images/georgia.jpg" alt="Церковь Гергети, Грузия" loading="lazy">
+            </div>
+            <div class="example-card__body">
+              <div class="example-card__top">
+                <span class="example-card__route">Казань → Грузия</span>
+                <span class="example-card__save">−8 200 ₽</span>
+              </div>
+              <p class="example-card__query">«Бюджет до 80 000, горы + море, сентябрь»</p>
+              <div class="example-card__result">
+                <span>Rooms Hotel Kazbegi</span>
+                <span>71 800 ₽</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">Отзывы</span>
+          <h2>2 400+ довольных путешественников</h2>
+          <div class="reviews__rating">
+            <span class="reviews__stars">★★★★★</span>
+            <span>4.9 из 5 · на основе 847 отзывов</span>
+          </div>
+        </div>
+        <div class="reviews__grid">
+          <article class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar">АК</div>
+              <div>
+                <strong>Анна К.</strong>
+                <span>Москва → Мальдивы</span>
+              </div>
+            </div>
+            <p>«Написала запрос в 23:00 — через полминуты уже были 3 варианта с объяснением, почему именно они. Сэкономили 31 000 ₽.»</p>
+          </article>
+          <article class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar review-card__avatar--blue">ДМ</div>
+              <div>
+                <strong>Дмитрий М.</strong>
+                <span>СПб → Турция</span>
+              </div>
+            </div>
+            <p>«Раньше обзванивал 5 агентств. Здесь нашли тур дешевле на 18%, менеджер оформил за один звонок.»</p>
+          </article>
+          <article class="review-card">
+            <div class="review-card__head">
+              <div class="review-card__avatar review-card__avatar--purple">ЕС</div>
+              <div>
+                <strong>Елена С.</strong>
+                <span>Казань → ОАЭ</span>
+              </div>
+            </div>
+            <p>«Удобно описать пожелания текстом — не нужно заполнять десять полей. Результат точный, без лишних предложений.»</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta__box">
+          <div class="cta__content">
+            <h2>Готовы найти свой идеальный тур?</h2>
+            <p>Опишите, куда хотите — мы сравним тысячи предложений и покажем лучшие варианты с ценами и условиями. Бесплатно, без звонков и без обязательств.</p>
+            <div class="cta__trust">
+              <span>✓ Бесплатный подбор</span>
+              <span>✓ Без обязательств</span>
+              <span>✓ Результат за 30 сек</span>
+            </div>
+          </div>
+          <div class="cta__action">
+            <a href="#request" class="btn btn--primary btn--lg">Подобрать тур</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="logo" aria-label="NovaTrip — на главную">
+          <span class="logo__icon">
+            <img src="images/logo.png" alt="" class="logo__mark" width="40" height="40">
+          </span>
+          <span class="logo__word">Nova<span class="logo__accent">Trip</span></span>
+        </a>
+        <p>Турагентство нового поколения.<br>Находим лучшее — вы отдыхаете.</p>
+      </div>
+      <div class="footer__links">
+        <div>
+          <h4>Сервис</h4>
+          <a href="#how">Как работает</a>
+          <a href="#destinations">Направления</a>
+          <a href="#experiences">Маршруты</a>
+          <a href="#features">Преимущества</a>
+          <a href="#examples">Примеры</a>
+        </div>
+        <div>
+          <h4>Контакты</h4>
+          <a href="tel:+78001234567">8 800 123-45-67</a>
+          <a href="mailto:hello@novatrip.ru">hello@novatrip.ru</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 NovaTrip. Все права защищены.</span>
+        <span>Лицензия РТО № 012345</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
