@@ -4,7 +4,7 @@
 
 ## Демо
 
-Сайт опубликован на GitHub Pages: **https://USERNAME.github.io/novatrip/**
+Сайт опубликован на GitHub Pages: **https://Ryt1nger.github.io/novatrip/**
 
 ## Локальный запуск
 
