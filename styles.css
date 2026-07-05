@@ -1597,8 +1597,7 @@ main, .header, .footer {
   }
 
   .app-download__lead .app-download__logo {
-    left: 50%;
-    transform: translateX(-50%);
+    display: none;
   }
 
   .app-download__content > p {
