@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+
 :root {
   --bg: #f8f9fb;
   --surface: #ffffff;
@@ -131,42 +132,39 @@ main, .header, .footer {
 }
 
 .logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 11px;
+  gap: 12px;
   font-weight: 600;
   font-size: 18px;
   letter-spacing: -0.03em;
+  text-decoration: none;
+  color: inherit;
   transition: opacity var(--transition);
 }
 
 .logo:hover {
-  opacity: 0.85;
-}
-
-.logo__icon {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #000;
-  border-radius: 11px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.14);
-  transition: transform var(--transition), box-shadow var(--transition);
+  opacity: 0.88;
 }
 
 .logo__mark {
-  width: 76%;
-  height: 76%;
-  object-fit: contain;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  display: block;
+  border-radius: 11px;
+  object-fit: cover;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.14);
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.logo:hover .logo__icon {
+.logo:hover .logo__mark {
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.14),
+    0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
 .logo__word {
@@ -1323,6 +1321,98 @@ main, .header, .footer {
   line-height: 1.65;
 }
 
+/* App download */
+.app-download {
+  padding: 72px 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.app-download__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.app-download__content h2 {
+  font-size: clamp(26px, 3.5vw, 34px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.app-download__content > p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 24px;
+  max-width: 440px;
+}
+
+.app-download__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.app-download__list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.app-download__icon {
+  flex-shrink: 0;
+}
+
+.app-download__stores {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.store-link {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  line-height: 0;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.store-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.store-link img {
+  display: block;
+  width: 132px;
+  height: 40px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* App mockup */
+.app-download__phone {
+  display: flex;
+  justify-content: center;
+}
+
+.app-mockup {
+  display: block;
+  width: min(420px, 48vw);
+  height: auto;
+  filter: drop-shadow(0 28px 56px rgba(0, 0, 0, 0.16));
+}
+
 /* CTA */
 .cta {
   padding: 72px 0 80px;
@@ -1477,22 +1567,8 @@ main, .header, .footer {
   }
 
   .hero__visual {
-    order: -1;
-    margin-top: 0;
+    display: none;
   }
-
-  .card-stack {
-    max-width: 320px;
-    height: 340px;
-    margin: 0 auto;
-  }
-
-  .offer-card--front {
-    top: 44px;
-  }
-
-  .hero__toast--1 { left: 0; }
-  .hero__toast--2 { right: 0; }
 
   .destinations__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1517,6 +1593,37 @@ main, .header, .footer {
     flex-direction: column;
     align-items: stretch;
     text-align: center;
+  }
+
+  .app-download__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .app-download__phone {
+    order: -1;
+  }
+
+  .app-download__content {
+    text-align: center;
+  }
+
+  .app-download__content > p {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .app-download__list {
+    align-items: center;
+  }
+
+  .app-download__stores {
+    justify-content: center;
+  }
+
+  .app-mockup {
+    width: min(340px, 85vw);
   }
 
   .analysis-panel__inner {
@@ -1609,6 +1716,7 @@ main, .header, .footer {
   .how,
   .destinations,
   .experiences,
+  .app-download,
   .analysis-panel,
   .features,
   .examples,

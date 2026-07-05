@@ -11,7 +11,7 @@ if (burger && nav) {
   mobileNav.className = 'mobile-nav';
   mobileNav.setAttribute('aria-label', 'Мобильная навигация');
   mobileNav.innerHTML = nav.innerHTML + `
-    <a href="#request" class="btn btn--primary" style="margin-top:16px;text-align:center">Подобрать тур</a>
+    <a href="#request" class="btn btn--primary" style="margin-top:16px;text-align:center">Спланировать поездку</a>
   `;
   document.body.appendChild(mobileNav);
 
@@ -28,7 +28,7 @@ if (burger && nav) {
   });
 }
 
-document.querySelectorAll('.step, .feature, .example-card, .dest-card, .review-card, .experience-card, .analysis-panel__inner').forEach(el => {
+document.querySelectorAll('.step, .feature, .example-card, .dest-card, .review-card, .experience-card, .analysis-panel__inner, .app-download__inner').forEach(el => {
   el.classList.add('fade-in');
 });
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NovaTrip — подбор туров, маршрутов, экскурсий и развлечений. Находим самые выгодные предложения за секунды по вашему запросу.">
-  <title>NovaTrip — Умный подбор туров</title>
+  <meta name="description" content="NovaTrip — ИИ-планировщик путешествий: тур, маршрут, экскурсии, рестораны и развлечения в одной поездке. Соберём выгодную программу под ваши интересы за секунды.">
+  <title>NovaTrip — ИИ для планирования путешествий</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -22,9 +22,7 @@
   <header class="header">
     <div class="container header__inner">
       <a href="#" class="logo" aria-label="NovaTrip — на главную">
-        <span class="logo__icon">
-          <img src="images/logo.png" alt="" class="logo__mark" width="40" height="40">
-        </span>
+        <img src="images/logo.png" alt="" class="logo__mark" width="46" height="46" decoding="async">
         <span class="logo__word">Nova<span class="logo__accent">Trip</span></span>
       </a>
       <nav class="nav" aria-label="Основная навигация">
@@ -33,8 +31,9 @@
         <a href="#experiences">Маршруты</a>
         <a href="#features">Преимущества</a>
         <a href="#examples">Примеры</a>
+        <a href="#app">Приложение</a>
       </nav>
-      <a href="#request" class="btn btn--sm btn--primary header__cta">Подобрать тур</a>
+      <a href="#request" class="btn btn--sm btn--primary header__cta">Спланировать поездку</a>
       <button class="burger" aria-label="Открыть меню" aria-expanded="false">
         <span></span>
         <span></span>
@@ -48,23 +47,23 @@
         <div class="hero__content">
           <div class="badge">
             <span class="badge__dot"></span>
-            Подбор за 30 секунд
+            План за 30 секунд
           </div>
           <h1 class="hero__title">
-            Самые выгодные туры —<br>
-            <span class="gradient-text">под ваш запрос</span>
+            Всё путешествие —<br>
+            <span class="gradient-text">под ваши интересы</span>
           </h1>
           <p class="hero__desc">
-            Опишите, куда и когда хотите — мы сравним тысячи предложений
-            и подберём тур, маршрут, экскурсии и развлечения под ваши интересы.
+            Расскажите, куда и когда хотите — ИИ сравнит тысячи предложений
+            и соберёт поездку целиком: тур, маршрут, экскурсии, рестораны и развлечения.
           </p>
           <form class="search-form" id="request">
             <div class="search-form__fields">
-              <input type="text" placeholder="Куда и что ищете? Бали, экскурсии, 2 человека" aria-label="Направление и пожелания">
+              <input type="text" placeholder="Куда и что хотите? Бали, экскурсии, 2 человека" aria-label="Направление и пожелания">
               <input type="text" placeholder="Даты: 15–25 августа" aria-label="Даты поездки">
             </div>
             <button type="submit" class="btn btn--primary btn--lg">
-              Найти лучшее предложение
+              Собрать путешествие
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -79,7 +78,7 @@
             <button type="button" class="tag">Мальдивы</button>
           </div>
           <div class="hero__tags hero__tags--soft">
-            <span class="hero__tags-label">Ещё подберём:</span>
+            <span class="hero__tags-label">ИИ также соберёт:</span>
             <button type="button" class="tag tag--soft">Авторские маршруты</button>
             <button type="button" class="tag tag--soft">Экскурсии</button>
             <button type="button" class="tag tag--soft">Развлечения</button>
@@ -96,7 +95,7 @@
             </div>
             <div class="stat">
               <span class="stat__value">30 сек</span>
-              <span class="stat__label">время подбора</span>
+              <span class="stat__label">время планирования</span>
             </div>
           </div>
         </div>
@@ -104,7 +103,7 @@
         <div class="hero__visual">
           <div class="hero__toast hero__toast--1">
             <span class="hero__toast-dot"></span>
-            Нашли тур на −18 400 ₽ · только что
+            Собрали поездку на −18 400 ₽ · только что
           </div>
           <div class="hero__toast hero__toast--2">
             <span class="hero__toast-dot hero__toast-dot--blue"></span>
@@ -156,12 +155,12 @@
       <div class="live-feed">
         <div class="live-feed__track">
           <span><strong>Москва → Бали</strong> · экономия 21 300 ₽ · 2 мин назад</span>
-          <span><strong>СПб → Дубай</strong> · подбор за 28 сек · 5 мин назад</span>
+          <span><strong>СПб → Дубай</strong> · план за 28 сек · 5 мин назад</span>
           <span><strong>Казань → Турция</strong> · −14 800 ₽ · 8 мин назад</span>
           <span><strong>Екатеринбург → Мальдивы</strong> · 743 варианта · 11 мин назад</span>
           <span><strong>Новосибирск → Египет</strong> · −9 600 ₽ · 14 мин назад</span>
           <span><strong>Москва → Бали</strong> · экономия 21 300 ₽ · 2 мин назад</span>
-          <span><strong>СПб → Дубай</strong> · подбор за 28 сек · 5 мин назад</span>
+          <span><strong>СПб → Дубай</strong> · план за 28 сек · 5 мин назад</span>
           <span><strong>Казань → Турция</strong> · −14 800 ₽ · 8 мин назад</span>
         </div>
       </div>
@@ -169,7 +168,7 @@
 
     <section class="logos">
       <div class="container">
-        <p class="logos__label">Сравниваем предложения от ведущих операторов</p>
+        <p class="logos__label">ИИ сравнивает туры от ведущих операторов</p>
         <div class="logos__marquee">
           <div class="logos__track">
             <span>Anex Tour</span>
@@ -193,8 +192,8 @@
       <div class="container">
         <div class="section-head">
           <span class="section-tag">Как это работает</span>
-          <h2>Три шага до идеального тура</h2>
-          <p>Без долгих звонков и ручного поиска — только точный результат</p>
+          <h2>Три шага до готового путешествия</h2>
+          <p>Без долгих звонков и ручного поиска — ИИ собирает поездку целиком</p>
         </div>
         <div class="steps">
           <article class="step">
@@ -205,8 +204,8 @@
               </svg>
             </div>
             <div class="step__num">01</div>
-            <h3>Опишите запрос</h3>
-            <p>Направление, бюджет, даты, пожелания по отелю, маршруту или развлечениям — своими словами.</p>
+            <h3>Опишите поездку</h3>
+            <p>Направление, бюджет, даты, интересы — тур, отель, экскурсии и рестораны своими словами.</p>
           </article>
           <article class="step">
             <div class="step__visual step__visual--2">
@@ -215,8 +214,8 @@
               </svg>
             </div>
             <div class="step__num">02</div>
-            <h3>Сравниваем все предложения</h3>
-            <p>Система проверяет цены, сезонность, отзывы и скрытые акции у всех операторов за секунды.</p>
+            <h3>ИИ анализирует все варианты</h3>
+            <p>Система проверяет туры, маршруты, экскурсии, рестораны, цены и отзывы у всех операторов за секунды.</p>
           </article>
           <article class="step">
             <div class="step__visual step__visual--3">
@@ -226,8 +225,8 @@
               </svg>
             </div>
             <div class="step__num">03</div>
-            <h3>Получите лучшее</h3>
-            <p>Топ-3 варианта с обоснованием выбора — сразу на экране. Менеджер подключится, когда решите оформить покупку.</p>
+            <h3>Получите готовый план</h3>
+            <p>Цельная поездка с обоснованием — тур, маршрут и активности на одном экране. Менеджер подключится, когда решите оформить покупку.</p>
           </article>
         </div>
       </div>
@@ -239,7 +238,7 @@
           <div>
             <span class="section-tag">Направления</span>
             <h2>Куда летят прямо сейчас</h2>
-            <p>Актуальные выгодные туры в эти страны — нажмите, чтобы подобрать</p>
+            <p>Популярные направления для планирования — нажмите, чтобы начать</p>
           </div>
           <a href="#request" class="btn btn--outline">Все направления</a>
         </div>
@@ -289,7 +288,7 @@
         <div class="section-head">
           <span class="section-tag">Не только пляж</span>
           <h2>Маршруты, впечатления и развлечения</h2>
-          <p>Помимо классических туров подберём программу отдыха под ваши интересы — от прогулок по городу до авторских путешествий</p>
+          <p>ИИ собирает программу целиком под ваши интересы — от тура и перелёта до экскурсий, ресторанов и авторских маршрутов</p>
         </div>
         <div class="experiences__grid">
           <article class="experience-card">
@@ -339,7 +338,7 @@
               </svg>
             </div>
             <h3>Активный отдых</h3>
-            <p>Трекинг, сёрфинг, горные лыжи, дайвинг и rafting — подберём тур с нужным уровнем активности.</p>
+            <p>Трекинг, сёрфинг, горные лыжи, дайвинг и rafting — включим в план с нужным уровнем активности.</p>
             <span class="experience-card__example">Сёрф · Трекинг · Горные лыжи</span>
           </article>
           <article class="experience-card">
@@ -366,9 +365,9 @@
     <section class="analysis-panel">
       <div class="container analysis-panel__inner">
         <div class="analysis-panel__content">
-          <span class="section-tag">Как мы подбираем</span>
-          <h2>847 предложений → 1 идеальный тур</h2>
-          <p>Учитываем цену, сезонность, рейтинг отеля, маршрут, экскурсии и скрытые акции операторов.</p>
+          <span class="section-tag">Как работает ИИ</span>
+          <h2>847 вариантов → 1 готовая поездка</h2>
+          <p>Учитываем тур, маршрут, экскурсии, рестораны, цену, сезонность, рейтинг отеля и скрытые акции операторов.</p>
           <ul class="analysis-panel__list">
             <li>
               <span class="analysis-panel__check">✓</span>
@@ -384,14 +383,14 @@
             </li>
             <li>
               <span class="analysis-panel__check">✓</span>
-              Маршруты, экскурсии и развлечения в одном подборе
+              Тур, маршрут, экскурсии и рестораны в одном плане
             </li>
           </ul>
         </div>
         <div class="analysis-panel__demo">
           <div class="analysis-demo">
             <div class="analysis-demo__header">
-              <span class="analysis-demo__status"><span class="badge__dot"></span> Подбор в процессе</span>
+              <span class="analysis-demo__status"><span class="badge__dot"></span> Планирование в процессе</span>
               <span class="analysis-demo__timer">00:24</span>
             </div>
             <div class="analysis-demo__bar">
@@ -426,7 +425,7 @@
               </svg>
             </div>
             <h3>Мгновенный анализ</h3>
-            <p>Сравниваем тысячи предложений параллельно — результат за полминуты, не за часы.</p>
+            <p>ИИ сравнивает тысячи предложений параллельно — готовый план за полминуты, не за часы.</p>
           </article>
           <article class="feature">
             <div class="feature__icon">
@@ -435,7 +434,7 @@
               </svg>
             </div>
             <h3>Реальная экономия</h3>
-            <p>Находим скрытые скидки и оптимальные комбинации перелёт + отель, которые легко пропустить.</p>
+            <p>Используем скрытые скидки и оптимальные комбинации перелёт + отель — в составе готовой поездки.</p>
           </article>
           <article class="feature">
             <div class="feature__icon">
@@ -453,7 +452,7 @@
               </svg>
             </div>
             <h3>Помощь при покупке</h3>
-            <p>Подбор — автоматически. Когда выберете тур, менеджер поможет оформить и оплатить, останется на связи до вылета.</p>
+            <p>Планирование — автоматически. Когда утвердите поездку, менеджер поможет оформить и оплатить, останется на связи до вылета.</p>
           </article>
         </div>
       </div>
@@ -463,8 +462,8 @@
       <div class="container">
         <div class="section-head">
           <span class="section-tag">Результаты</span>
-          <h2>Результаты нашего подбора</h2>
-          <p>Реальные кейсы подбора за последний месяц</p>
+          <h2>Результаты планирования</h2>
+          <p>Реальные поездки, собранные ИИ за последний месяц</p>
         </div>
         <div class="examples__grid">
           <article class="example-card">
@@ -538,7 +537,7 @@
                 <span>Москва → Мальдивы</span>
               </div>
             </div>
-            <p>«Написала запрос в 23:00 — через полминуты уже были 3 варианта с объяснением, почему именно они. Сэкономили 31 000 ₽.»</p>
+            <p>«Написала запрос в 23:00 — через полминуты уже был готовый план: тур, экскурсии и рестораны. Сэкономили 31 000 ₽.»</p>
           </article>
           <article class="review-card">
             <div class="review-card__head">
@@ -548,7 +547,7 @@
                 <span>СПб → Турция</span>
               </div>
             </div>
-            <p>«Раньше обзванивал 5 агентств. Здесь нашли тур дешевле на 18%, менеджер оформил за один звонок.»</p>
+            <p>«Раньше обзванивал 5 агентств. Здесь ИИ собрал поездку дешевле на 18%, менеджер оформил за один звонок.»</p>
           </article>
           <article class="review-card">
             <div class="review-card__head">
@@ -558,8 +557,51 @@
                 <span>Казань → ОАЭ</span>
               </div>
             </div>
-            <p>«Удобно описать пожелания текстом — не нужно заполнять десять полей. Результат точный, без лишних предложений.»</p>
+            <p>«Удобно описать пожелания текстом — не нужно заполнять десять полей. ИИ собрал поездку целиком, без лишних предложений.»</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-download" id="app">
+      <div class="container app-download__inner">
+        <div class="app-download__phone">
+          <img
+            src="images/app-mockup.png"
+            alt="Приложение NovaTrip на iPhone — подбор туров, поездки и направления"
+            class="app-mockup"
+            width="420"
+            height="630"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="app-download__content">
+          <span class="section-tag">Мобильное приложение</span>
+          <h2>Путешествие всегда под рукой</h2>
+          <p>Планируйте поездку, собирайте маршрут и сохраняйте программу — прямо с телефона. Тот же ИИ-помощник, что на сайте, только быстрее.</p>
+          <ul class="app-download__list">
+            <li>
+              <svg class="app-download__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#ecfdf5"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#059669" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              План за 30 секунд в один tap
+            </li>
+            <li>
+              <svg class="app-download__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#ecfdf5"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#059669" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Уведомления о снижении цены
+            </li>
+            <li>
+              <svg class="app-download__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#ecfdf5"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#059669" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Избранное и история запросов
+            </li>
+          </ul>
+          <div class="app-download__stores">
+            <a href="#" class="store-link" aria-label="Скачать в App Store">
+              <img src="images/badge-app-store.svg" alt="Загрузите в App Store" width="120" height="40" loading="lazy">
+            </a>
+            <a href="#" class="store-link" aria-label="Скачать в Google Play">
+              <img src="images/badge-google-play.png" alt="Доступно в Google Play" width="135" height="40" loading="lazy">
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -568,16 +610,16 @@
       <div class="container">
         <div class="cta__box">
           <div class="cta__content">
-            <h2>Готовы найти свой идеальный тур?</h2>
-            <p>Опишите, куда хотите — мы сравним тысячи предложений и покажем лучшие варианты с ценами и условиями. Бесплатно, без звонков и без обязательств.</p>
+            <h2>Готовы спланировать идеальное путешествие?</h2>
+            <p>Расскажите, куда хотите — ИИ сравнит тысячи предложений и соберёт поездку целиком с ценами и условиями. Бесплатно, без звонков и без обязательств.</p>
             <div class="cta__trust">
-              <span>✓ Бесплатный подбор</span>
+              <span>✓ Бесплатное планирование</span>
               <span>✓ Без обязательств</span>
-              <span>✓ Результат за 30 сек</span>
+              <span>✓ План за 30 сек</span>
             </div>
           </div>
           <div class="cta__action">
-            <a href="#request" class="btn btn--primary btn--lg">Подобрать тур</a>
+            <a href="#request" class="btn btn--primary btn--lg">Спланировать поездку</a>
           </div>
         </div>
       </div>
@@ -588,12 +630,10 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <a href="#" class="logo" aria-label="NovaTrip — на главную">
-          <span class="logo__icon">
-            <img src="images/logo.png" alt="" class="logo__mark" width="40" height="40">
-          </span>
+          <img src="images/logo.png" alt="" class="logo__mark" width="46" height="46" decoding="async">
           <span class="logo__word">Nova<span class="logo__accent">Trip</span></span>
         </a>
-        <p>Турагентство нового поколения.<br>Находим лучшее — вы отдыхаете.</p>
+        <p>ИИ-помощник для путешествий.<br>Планируем поездку целиком — вы отдыхаете.</p>
       </div>
       <div class="footer__links">
         <div>
@@ -603,6 +643,7 @@
           <a href="#experiences">Маршруты</a>
           <a href="#features">Преимущества</a>
           <a href="#examples">Примеры</a>
+          <a href="#app">Приложение</a>
         </div>
         <div>
           <h4>Контакты</h4>
