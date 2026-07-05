@@ -1535,6 +1535,18 @@ main, .header, .footer {
   font-weight: 500;
 }
 
+.mobile-nav__stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.mobile-nav__cta {
+  margin-top: auto;
+  text-align: center;
+}
+
 /* Animations */
 .fade-in {
   opacity: 0;

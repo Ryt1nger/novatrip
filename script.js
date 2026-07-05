@@ -11,7 +11,15 @@ if (burger && nav) {
   mobileNav.className = 'mobile-nav';
   mobileNav.setAttribute('aria-label', 'Мобильная навигация');
   mobileNav.innerHTML = nav.innerHTML + `
-    <a href="#request" class="btn btn--primary" style="margin-top:16px;text-align:center">Спланировать поездку</a>
+    <div class="mobile-nav__stores">
+      <a href="#" class="store-link" aria-label="Скачать в App Store">
+        <img src="images/badge-app-store.svg" alt="Загрузите в App Store" width="120" height="40" loading="lazy">
+      </a>
+      <a href="#" class="store-link" aria-label="Скачать в Google Play">
+        <img src="images/badge-google-play.png" alt="Доступно в Google Play" width="135" height="40" loading="lazy">
+      </a>
+    </div>
+    <a href="#request" class="btn btn--primary mobile-nav__cta">Спланировать поездку</a>
   `;
   document.body.appendChild(mobileNav);
 
